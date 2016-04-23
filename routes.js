@@ -12,7 +12,7 @@ var Router = {
     app.get('/about', controllers.About.index);
     
     //Users
-    app.get('/users', controllers.Users.index);
+    app.get('/users', controllers.Users.index); 
     
     }
     
