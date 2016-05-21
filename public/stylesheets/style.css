@@ -3,8 +3,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   padding-top: 70px;
   padding-bottom: 30px;
+  background-image: url("http://fc03.deviantart.net/fs27/i/2008/158/7/4/Pieces_of_life__desktopography_by_JaxeNL.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 a {
   color: #00B7FF;
 }
+
+p {
+  color: black;
+}
+
+h1 {
+  color: white;
+}
+

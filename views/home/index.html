@@ -1,60 +1,12 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title | escape }}</p>
-    <table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Column heading</th>
-      <th>Column heading</th>
-      <th>Column heading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="info">
-      <td>3</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="success">
-      <td>4</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="danger">
-      <td>5</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="warning">
-      <td>6</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="active">
-      <td>7</td>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-  </tbody>
-</table> 
+    <h1 class="text-center"><strong>{{ title }}</strong><small> Twitter Hashtag Search Engine </small> </h1>
+      <p class="text-center">Welcome to {{ title | escape }}</p>
+    <div class="container">
+    <h3> What you can expect from this app!</h3>
+    <p class="lead"> Streams was designed to make it easier for Twitter users to search up hashtags and get results instantly. While it may seem like a simple application there was a lot of coding that took place in order to make it possible for our users to search up Twitter hashtags. While using this website one can expect to be able to find out how many people are susing a certain hashtag. For example,   </p>
+    </div>
+  
+  
 {% endblock %}

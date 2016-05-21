@@ -1,5 +1,4 @@
 // Local dependencies
-//Tells the computer where to find the pages at
 var controllers = require('./controllers');
 
 var Router = {
@@ -12,10 +11,8 @@ var Router = {
         // About page
         app.get('/about', controllers.About.index);
         
-        //Search
+        // Search
         app.get('/search', controllers.Search.index);
-
-
     }
 
 };
