@@ -2,23 +2,34 @@
 
 {% block content %}
 <div class="jumbotron">
-    <h1>Search</h1>
-    <p class="lead"> Search for hashtag</p>
-    
-    <form class="form-inline">
-        <div class="form-group">
-            <label class="sr-only" for="hashtag">Hashtag</label>
-            <input type="text" class="form-control" id="hashtag" placeholder="#nyot">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
+     <p class="lead">Search for a hashtag</p>
+
+    <form class="form-inline" action="/search" method="post">
+      <div class="form-group">
+        <label class="sr-only" for="hashtag">Hashtag</label>
+        <input type="text" class="form-control" id="hashtag" name="hashtag" placeholder="#nyc, #Decision2016">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
     </form>
-    
-    <h4>Search Results</h4>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            Basic Panel
-        </div>
-    </div>
-    
 </div>
+
+{% if searchTerm %}
+
+  {% if numItems == 0 %}
+  <h4>No results for "{{ searchTerm }}"</h4>
+  {% else %}
+  <h4>Search for "{{ searchTerm }}" ({{ numItems }})</h4>
+  <hr>
+
+  <div class="container">
+    <div class="row tweets-container">
+      {% for item in items %}
+        {% include "search/_item.html" %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+{% endif %}
+
 {% endblock %}
